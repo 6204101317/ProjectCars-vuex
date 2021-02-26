@@ -4,12 +4,12 @@
       <b-row align-v="center">
         <div class="row">
           <product
-            v-for="(car, index) in Menuitem"
+            v-for="(car, index) in SearchMenu"
             :key="index"
             :NameProduct="car.NameProduct"
             :img="car.img"
             :Price="car.Price"
-            @Order="menuorder"
+           
           /></div></b-row
     ></b-container>
     <!-- <User></User> -->
@@ -26,12 +26,13 @@ export default {
   },
   props: {
     Menuitem: Array
-  }
+  },
   // methods: {
   //   menuorder(value) {
   //     this.select.push(value);
   //     this.$emit("Order", this.select);
   //   }
+  // }
 };
 </script>
 <style></style>

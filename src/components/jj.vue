@@ -1,17 +1,17 @@
 <template>
   <div class="hell">
-   <h1>{{ getTodoById(id)}}</h1>
+    <h1>{{ getTodoById(id) }}</h1>
   </div>
 </template>
 
 <script>
-import { mapGetters} from "vuex";
+import { mapGetters } from "vuex";
 export default {
   name: "HelloWorld",
   props: {
     id: Number
   },
-  computed:{
+  computed: {
     ...mapGetters([
       "doneTodosCount",
       "doubleCounter",

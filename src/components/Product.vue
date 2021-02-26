@@ -25,7 +25,11 @@
         class="mb-5"
       ></b-form-spinbutton>
       <div>
-        <button type="button" class="btn btn-outline-info" @click="Order(Amout,id)">
+        <button
+          type="button"
+          class="btn btn-outline-info"
+          @click="Order(Amout, id)"
+        >
           Add to cart
         </button>
       </div>
@@ -48,20 +52,19 @@ export default {
   },
   computed: {
     ...mapGetters(["Order"])
-  }
+  },
+  // methods: {
+  //   Order() {
+  //     alert("Please press  Submit to confirm the product you have chosen ");
+  //     this.$emit("Order", {
+  //       NameProduct: this.NameProduct,
+  //       Price: this.Price,
+  //       Amount: this.Amount,
+  //       Total: this.Price * this.Amount
+  //     });
+  //   }
+  // }
 };
-// },
-// methods: {
-//   Order() {
-//     alert("Please press  Submit to confirm the product you have chosen ");
-//     this.$emit("Order", {
-//       NameProduct: this.NameProduct,
-//       Price: this.Price,
-//       Amount: this.Amount,
-//       Total: this.Price * this.Amount
-//     });
-//   }
-// }
 </script>
 <style>
 .btn-outline-info {

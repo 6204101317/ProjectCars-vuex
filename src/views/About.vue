@@ -22,7 +22,7 @@
         </tr>
       </thead>
       <tbody class="text-white">
-        <tr v-for="(da, index) in ShowMenuSelect" :key="index">
+        <tr v-for="(da, index) in SearchMenuSelect" :key="index">
           <td>{{ da.NameProduct }}</td>
           <td>{{ da.Price }}</td>
           <td>{{ da.Amount }}</td>
@@ -44,19 +44,20 @@ export default {
     User
   },
   computed: {
-    ...mapGetters(["ShowMenuSelect"])
+    ...mapGetters(["SearchMenuSelect"])
   },
 
   props: {
     Total: Number,
     Data: Array,
     Menuitem: Array
+  },
+  methods: {
+    menuorder(value) {
+      this.select.push(value);
+      this.$emit("Order", this.select);
+    }
   }
-  // methods: {
-  //   menuorder(value) {
-  //     this.select.push(value);
-  //     this.$emit("Order", this.select);
-  //   }
 };
 </script>
 <style>

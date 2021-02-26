@@ -20,31 +20,25 @@
           <button
             type="button "
             class="btn btn-outline-ee mr-1"
-            @click="submit()"
+            @click="Submit()"
           >
             Submit
           </button>
-          <button type="button" class="btn btn-outline-gg" @click="cleardata()">
+          <button type="button" class="btn btn-outline-gg" @click="Clear()">
             Clear
           </button>
         </router-link>
       </div>
     </b-navbar>
-    <router-view
-      :Total="Total"
-      :Menuitem="Menuitem"
-      :Data="Data"
-      @Order="menuorder"
-      @OrderAdmin="AddMenu"
-    />
+    <router-view />
   </div>
 </template>
 <script>
-import { mapMutation } from "vuex";
+import { mapMutations } from "vuex";
 export default {
   name: "navber",
   computed: {
-    ...mapMutation(["Clear", "Submit"])
+    ...mapMutations(["Clear", "Submit"])
   }
   // data() {
   //   return {
